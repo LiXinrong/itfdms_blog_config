@@ -1,0 +1,94 @@
+#加密配置
+jasypt:
+  encryptor:
+    password: itfdms
+
+server:
+  tomcat:
+    max-threads: 500 # Maximum amount of worker threads.
+    min-spare-threads: 50 # Minimum amount of worker threads
+
+spring:
+  redis:
+    database: 1
+      password: lixinrong921016.
+      timeout: 1000
+      cluster:
+        max-redirects: 3
+        nodes:
+        - 127.0.0.1:6379
+        - 127.0.0.1:6380
+        - 127.0.0.1:6381
+      jedis:
+        pool:
+          config :
+            max-active:  100 # 连接池最大连接数（使用负值表示没有限制）
+            maxIdle: 100   # 连接池中的最大空闲连接
+            min-Idle: 50 # 连接池中的最小空闲连接
+            maxWaitMillis: 6000  # 连接池最大阻塞等待时间（使用负值表示没有限制）
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: lixinrong921016.
+  http:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+
+redi
+  cache:
+    expiration: 3601
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: itfdms-auth,itfdms-upms-service
+  Httpclient:
+    enabled: false
+  OkHttp:
+    enabled: true
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+feign:
+  hystrix:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      feignName:
+        connectTimeout: 30000
+        readTimeout: 30000
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 500
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold: 800
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+#监控短点配置
+management:
+  security:
+    enabled: false
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: false
+

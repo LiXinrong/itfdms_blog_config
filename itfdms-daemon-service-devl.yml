@@ -1,0 +1,13 @@
+server:
+  port: 4060
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456.
+    url: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+  elasticjob:
+    zookeeper:
+      server-lists: 127.0.0.1:2181
+      namespace: itfdms-daemon
