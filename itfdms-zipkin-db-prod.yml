@@ -4,10 +4,29 @@ server:
 # datasoure默认使用JDBC
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    check-config-location: true
+    url: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
     password: 123456.
-    url: jdbcUrl: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    minIdle: 5
+    maxActive: 100
+    initialSize: 10
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    removeAbandoned: true
+    removeAbandonedTimeout: 1800
+    maxPoolPreparedStatementPerConnectionSize: 50
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    filters: stat,wall,log4j
+    logSlowSql: true
 
 zipkin:
   collector:
