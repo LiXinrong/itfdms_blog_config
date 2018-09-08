@@ -9,7 +9,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong
     username: root
     password: 123456.
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     minIdle: 5
     maxActive: 100
     initialSize: 10
