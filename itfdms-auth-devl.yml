@@ -6,7 +6,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     check-config-location: true
-    url: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    url: jdbc:mysql://127.0.0.1:3306/itfdms_blog?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: 123456.
     driver-class-name: com.mysql.cj.jdbc.Driver
