@@ -21,7 +21,7 @@ sharding:
       type: com.zaxxer.hikari.HikariDataSource
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
-      password: 123456.
+      password: ITfdms_blog
       jdbc-url: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     datasource:
       names: ds
@@ -29,7 +29,7 @@ sharding:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
         username: root
-        password: 123456.
+        password: ITfdms_blog
         jdbc-url: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     config:
       sharding:

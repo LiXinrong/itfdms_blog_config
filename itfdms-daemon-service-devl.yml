@@ -7,7 +7,7 @@ spring:
     check-config-location: true
     url: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
-    password: 123456.
+    password: ITfdms_blog
     driver-class-name: com.mysql.cj.jdbc.Driver
     minIdle: 5
     maxActive: 100
