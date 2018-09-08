@@ -38,8 +38,8 @@ security:
   sessions: stateless
   oauth2:
     client:
-      client-id: pig
-      client-secret: pig
+      client-id: itfdms
+      client-secret: itfdms
     resource:
       jwt:
          key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
