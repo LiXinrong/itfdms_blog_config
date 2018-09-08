@@ -4,7 +4,7 @@ server:
 # datasoure默认使用JDBC
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
+#    type: com.alibaba.druid.pool.DruidDataSource
     check-config-location: true
     url: jdbc:mysql://127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong
     username: root
@@ -16,7 +16,7 @@ spring:
     maxWait: 60000
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 300000
-    validationQuery: select 1 FROM DUAL
+    validationQuery: select 'X'
     testWhileIdle: true
     testOnBorrow: false
     testOnReturn: false
