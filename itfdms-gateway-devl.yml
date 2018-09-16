@@ -1,5 +1,8 @@
 server:
   port: 9999
+  tomcat:
+    max-threads: 50 # Maximum amount of worker threads.
+    min-spare-threads: 10 # Minimum amount of worker threads
 
 spring:
   zipkin:
@@ -13,8 +16,7 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
-      clients: itfdms-auth
-#      clients: itfdms-auth,itfdms-upms-service,itfdms-daemon-service
+      clients: itfdms-auth,itfdms-upms-service,itfdms-daemon-service
   ignoredServices: '*'
   host:
     connect-timeout-millis: 10000
@@ -25,7 +27,7 @@ zuul:
     repository: REDIS
     behind-proxy: true
     policies:
-      pig-upms-service:
+      itfdms-upms-service:
         limit: 100
         quota: 100
         refresh-interval: 3
@@ -42,6 +44,9 @@ security:
       client-id: itfdms
       client-secret: itfdms
     resource:
+      loadBalanced: true
+        token-info-uri: ${security.auth.server}/oauth/check-token
+        service-id: itfdms-gateway
       jwt:
          key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
 
