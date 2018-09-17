@@ -20,6 +20,7 @@ spring:
       max-request-size: 1000MB
   redis:
     database: 1
+    remote: false
     password: lixinrong921016.
     timeout: 1000
     cluster:
