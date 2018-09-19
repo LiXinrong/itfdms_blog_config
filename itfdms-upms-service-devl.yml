@@ -18,11 +18,11 @@ spring:
 sharding:
   jdbc:
     defaultDataSourceName:
-      type: com.zaxxer.hikari.HikariDataSource
+      type: com.zaxxer.hikarHikai.riDataSource
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: ITfdms_blog
-      jdbc-url: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     datasource:
       names: ds
       ds:
@@ -30,7 +30,7 @@ sharding:
         driver-class-name: com.mysql.cj.jdbc.Driver
         username: root
         password: ITfdms_blog
-        jdbc-url: jdbc:mysql//127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/itfdms_blog?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     config:
       sharding:
         tables:
