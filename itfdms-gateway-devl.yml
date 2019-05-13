@@ -9,7 +9,7 @@ spring:
     sampler:
       percentage: 0.2
 
-redis:
+MyRedis2:
   database: 1
   remote: true
   password:
