@@ -19,7 +19,7 @@ spring:
       max-file-size: 1000MB
       max-request-size: 1000MB
 
-redis:
+MyRedis:
   database: 1
   remote: true
   password:
