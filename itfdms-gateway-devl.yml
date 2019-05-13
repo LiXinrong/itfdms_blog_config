@@ -14,7 +14,7 @@ redis:
   remote: true
   password:
   timeout: 1000
-  max-redirects: 3
+  maxRedirects: 3
   nodes:
     - 127.0.0.1:7001
     - 127.0.0.1:7002
