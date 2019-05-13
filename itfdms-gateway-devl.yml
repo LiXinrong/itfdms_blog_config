@@ -13,7 +13,8 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
-      clients: itfdms-auth,itfdms-upms-service,itfdms-daemon-service
+#      clients: itfdms-auth,itfdms-upms-service,itfdms-daemon-service
+      clients: itfdms-auth
   ignoredServices: '*'
   host:
     connect-timeout-millis: 10000
